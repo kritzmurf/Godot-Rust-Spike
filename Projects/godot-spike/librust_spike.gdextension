@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://../rust-spike/target/debug/librust_spike.so"
+linux.release.x86_64 =   "res://../rust-spike/target/release/librust_spike.so"
+windows.debug.x86_64 =   "res://../rust-spike/target/debug/rust_spike.dll"
+windows.release.x86_64 = "res://../rust-spike/target/release/rust_spike.dll"
+macos.debug =            "res://../rust-spike/target/debug/librust_spike.dylib"
+macos.release =          "res://../rust-spike/target/release/librust_spike.dylib"
+macos.debug.arm64 =      "res://../rust-spike/target/debug/librust_spike.dylib"
+macos.release.arm64 =    "res://../rust-spike/target/release/librust_spike.dylib"
