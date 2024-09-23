@@ -33,5 +33,17 @@ impl ISprite2D for Player {
     }
 }
 
+#[godot_api]
+impl Player {
+    #[func]
+    fn increase_speed(&mut self, amount: f64) {
+        self.speed += amount;
+        self.base_mut().emit_signal("speed_increaded".into(), &[]);
+    }
+
+    #[signal]
+    fn speed_increased();
+}
+
 #[gdextension]
 unsafe impl ExtensionLibrary for Player {}
